@@ -190,4 +190,8 @@
  	<string name="choose_payment_getway">Chọn phương thức thanh toán</string>
  	<string name="priceTransport">Phí vận chuyển:</string>
  	<string name="payment_when_receive_product">Thanh toán khi nhận hàng</string>
+ 	<string name="managerment">Quản lý</string>
+ 	<string name="account">Tài khoản</string>
+ 	<string name="profile_product">Đơn hàng</string>
+ 	<string name="log_out">Đăng xuất</string>
 </resources>

@@ -114,7 +114,7 @@ public class LoadTabGreen extends TabActivity {
         StaticValue.tabSetting = indexTab;
         
      // Do the same for the other tabs
-        intentWallet = new Intent().setClass(LoadTabGreen.this, ManagermentActivity.class);
+        intentWallet = new Intent().setClass(LoadTabGreen.this, ProfileActivity.class);
         specWallet = tabHost.newTabSpec("wallet").setIndicator(quanly,
                           res.getDrawable(R.drawable.icon))
                       .setContent(intentWallet);

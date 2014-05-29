@@ -121,7 +121,7 @@ public class ShoppingCartView extends LinearLayout implements OnClickListener{
 						itemView.btnDelete.setVisibility(View.VISIBLE);
 						//ShoppingCartView.btnEdit.setText(mContext.getResources().getString(R.string.btnDone));
 						isDone = true;
-						btnEdit.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.button_done));
+//						btnEdit.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.button_done));
 						
 					}
 					else
@@ -129,7 +129,7 @@ public class ShoppingCartView extends LinearLayout implements OnClickListener{
 						//itemView.btnDelete.setVisibility(View.INVISIBLE);
 						//ShoppingCartView.btnEdit.setText(mContext.getResources().getString(R.string.btnEdit));
 						isDone = false;
-						btnEdit.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.button_edit));
+//						btnEdit.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.button_edit));
 					}
 					
 				}

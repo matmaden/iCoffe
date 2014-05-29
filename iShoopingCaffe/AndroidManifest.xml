@@ -47,7 +47,7 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
              />
         <activity
-            android:name="com.example.ishoopingcaffe.ManagermentActivity"
+            android:name="com.example.ishoopingcaffe.ProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
            />

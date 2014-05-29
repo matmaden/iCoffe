@@ -5,25 +5,28 @@
     android:background="@color/main_color"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/icon_back"
-        android:layout_marginLeft="3dp"   
-        android:textStyle="bold" />
+    
 	<TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:singleLine="true"
-        android:text="@string/textKhamPha"
         android:textColor="@color/white"
         android:layout_centerInParent="true"
+        android:textStyle="bold" />
+	<Button
+        android:id="@+id/btnOption"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Camera"
+        android:background="@android:color/transparent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="5dp"   
         android:textStyle="bold" />
 </RelativeLayout>

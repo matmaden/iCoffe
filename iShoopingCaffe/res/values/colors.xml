@@ -51,6 +51,8 @@
 	  <color name="color_chop_selected">#CE8957</color>
 	  <color name="color_chop">#A4A29F</color>
 	  
-	  <color name="brown_coffe">#68450E</color>
+	  <color name="main_color">#68450E</color>
+	  <color name="main_color_selected">#CE8957</color>
+	  <color name="line_border_main_color">#A4A29F</color>
 	  <color name="line">#7A7A7A</color>
 </resources> 

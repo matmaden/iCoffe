@@ -38,6 +38,7 @@ public class DiscoveryActivity extends BaseActivity implements OnEventControlLis
 		mContext = this;
 		mainContainerDiscovery = (LinearLayout)findViewById(R.id.mainContainerDiscovery);
 		viewMainDiscovery = new ViewMainDiscovery(this, this);
+		viewMainDiscovery.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		mainContainerDiscovery.addView(viewMainDiscovery);
 	}
 
@@ -53,6 +54,7 @@ public class DiscoveryActivity extends BaseActivity implements OnEventControlLis
 		{
 			mainContainerDiscovery.removeAllViews();
 			viewMainDiscovery = new ViewMainDiscovery(this, this);
+			viewMainDiscovery.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 			animation = AnimationUtils.loadAnimation(mContext, R.anim.rail_from_right_to_left);
 			viewMainDiscovery.startAnimation(animation);
 			mainContainerDiscovery.addView(viewMainDiscovery);
