@@ -13,4 +13,5 @@
     
     <dimen name="text_normal">15sp</dimen>
     <dimen name="image_circle_size_avatar_user">35dp</dimen>
+    <dimen name="image_circle_size_big_avatar_user">60dp</dimen>
 </resources>

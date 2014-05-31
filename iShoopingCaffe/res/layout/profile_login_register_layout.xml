@@ -8,24 +8,35 @@
     >
 
     <!-- Screen Login and Register -->
-
+	<include 
+	    layout="@layout/header_textcenter"
+	    />
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/btnSignIn_SignInUp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/selector_shape_square_left_top_bottom_radius"
+            android:text="@string/txtLogin"
+            android:textColor="@color/selector_text_white"
             android:focusable="true" />
         <!-- android:background="@drawable/button_ss_leftselection" -->
 
         <Button
             android:id="@+id/btnRegister_SignInUp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txtRegister"
+            android:textColor="@color/selector_text_white"
             android:background="@drawable/selector_shape_square_right_top_bottom_radius" />
         <!-- android:background="@drawable/button_ss_rightselection" -->
     </LinearLayout>
@@ -36,7 +47,6 @@
         android:id="@+id/Layout_SignIn"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/white"
          >
 
         <LinearLayout
@@ -45,9 +55,9 @@
             android:gravity="center"
             android:orientation="vertical"
             android:paddingBottom="100dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="40dp" >
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp" >
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -105,7 +115,7 @@
                 android:button="@drawable/checkbox"
                 android:gravity="left"
                 android:paddingLeft="30dp"
-                android:text="NHows"
+                android:text="@string/rememberPassword"
                 android:textColor="@color/text_normal"
                 android:textStyle="bold" />
 
@@ -116,16 +126,17 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/button_normal"
                 android:text="@string/txtLogin"
-                android:textColor="@color/white"
+                android:textColor="@color/selector_text_white"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnFogotPassword_SignIn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="quen pass"
-                android:textColor="@color/text_blue" />
+                android:layout_margin="5dp"
+                android:background="@drawable/button_normal"
+                android:text="@string/forgotPassword"
+                android:textColor="@color/selector_text_white" />
         </LinearLayout>
     </ScrollView>
     <!-- Body Sign Up -->
@@ -134,7 +145,6 @@
         android:id="@+id/Layout_SignUp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/white"
         android:visibility="gone"
          >
 
@@ -251,7 +261,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_normal"
                 android:text="@string/txtRegister"
-                android:textColor="@color/white"
+                android:textColor="@color/selector_text_white"
                 android:textStyle="bold" />
             <!-- End Border Register -->
         </LinearLayout>

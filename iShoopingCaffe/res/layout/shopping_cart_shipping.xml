@@ -57,7 +57,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/txtEmail"
+                android:text="@string/hintEmail"
                 android:textColor="#000"
                 android:textStyle="bold" />
 

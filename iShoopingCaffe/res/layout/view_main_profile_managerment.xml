@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/layoutContainerMainManager"
+    >
+
+    <include layout="@layout/header_textcenter_option_right" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/bgheader1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <Button
+            android:id="@+id/btnManagerment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_shape_square_left_top_bottom_radius"
+            android:text="@string/managerment"
+            android:textColor="@color/selector_text_white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_shape_square_no_radius"
+            android:text="@string/account"
+            android:textColor="@color/selector_text_white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOrders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_shape_square_no_radius"
+            android:text="@string/profile_product"
+            android:textColor="@color/selector_text_white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_shape_square_right_top_bottom_radius"
+            android:text="@string/log_out"
+            android:textColor="@color/selector_text_white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layout_add_subview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+    </ScrollView>
+
+</LinearLayout>

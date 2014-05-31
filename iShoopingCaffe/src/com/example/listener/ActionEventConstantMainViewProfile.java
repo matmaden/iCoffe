@@ -9,12 +9,12 @@ package com.example.listener;
   * @since: 1.0
   * 
   */
-public class ActionEventConstantProfile {
-	public static final int ACTION_CHANGE_VIEW_LOGIN_REGISTER = 1;
-	public static final int ACTION_CHANGE_VIEW_PROFILE_MANAGER = 2;
-	public static final int ACTION_CHANGE_VIEW_LOGOUT = 3;
-	public static final int ACTION_CHANGE_VIEW_ORDER_PPRODUCT = 4;
-	public static final int ACTION_CHANGE_VIEW_ORDER_PPRODUCT_DETAILS = 5;
+public class ActionEventConstantMainViewProfile {
+	public static final int ACTION_CHANGE_VIEW_MANAGER = 1;
+	public static final int ACTION_CHANGE_VIEW_ACCOUNT = 2;
+	public static final int ACTION_CHANGE_VIEW_ORDER = 3;
+	public static final int ACTION_CHANGE_VIEW_LOGOUT = 4;
+	public static final int ACTION_CHANGE_VIEW_DETAILS_ADD_COMMENT_PPRODUCT = 5;
 	public static final int ACTION_CHANGE_VIEW_DETAILS_ADD_SHOPPING_CART = 6;
 //	public static final int ACTION_DOWN_LOAD = 6;
 //	public static final int ACTION_CANCEL_DOWNLOAD = 7;

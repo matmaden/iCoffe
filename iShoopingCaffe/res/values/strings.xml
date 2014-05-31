@@ -85,19 +85,17 @@
     <string name="txtQuantity">Quantity</string>
     <string name="txtUnitOfMeasure">Unit Of Measure</string>
     <string name="txtBuyAsGuess">Buy as Guest</string>
-    <string name="txtLogin">Login</string>    
-    <string name="txtRegister">Register</string>
     <string name="txtFail">Fail</string>
     
     <string name="hintEmail">Email</string>
-    <string name="txtEmail">Email</string>
     <string name="hintPassword">Password</string>
     <string name="hintCardNumber">Card number</string>
     <string name="hintCVV">CVV</string>
     <string name="hintAddress">Address</string>
     <string name="hintEmail1">Email</string>
-    <string name="hintFirstName">First name</string>
-    <string name="hintLastName">Last name</string>
+    <string name="hintFirstName">Firstname</string>
+    <string name="hintLastName">Lastname</string>
+    <string name="hintFullName">Fullname</string>
     <string name="hintCity">City</string>
     <string name="hintState">State/Province/Region</string>
     <string name="hintZipCode">ZIP Code</string>
@@ -194,4 +192,25 @@
  	<string name="account">Tài khoản</string>
  	<string name="profile_product">Đơn hàng</string>
  	<string name="log_out">Đăng xuất</string>
+ 	<string name="change_password">Đổi mật khẩu</string>
+ 	<!-- view change password -->
+    <string name="ChangePassword">Đổi mật khẩu</string>
+    <string name="currentPassword">Mật khẩu hiện tại</string>
+    <string name="newPassword">Mật khẩu mới</string>
+    <string name="confirmNewPassword">Xác nhận mật khẩu</string>
+    <string name="error_current_password_invalidate">You input invalid current password.</string>
+    <string name="error_new_password_invalidate">Please input the new password.</string>
+    <string name="error_confirm_password_invalidate">Confirm New Password you typed do not match.</string>
+    <string name="message_change_pass_success">Your password has been changed.</string>
+    <string name="message_change_pass_fail">Change password failed!</string>
+    <string name="txtLogin">Đăng nhập</string>    
+    <string name="txtRegister">Đăng ký</string>
+    <string name="rememberPassword">Nhớ mật khẩu</string>
+    <string name="forgotPassword">Quên mật khẩu</string>
+    <!-- end change password -->
+    <!--  -->
+    <string name="profile">Profile</string>
+    <string name="updateInforProfile">Cập nhật thông tin</string>
+    <string name="inforPayment">Thông tin thanh toán</string>
+    <string name="inforAddressPayment">Địa chỉ thanh toán</string>
 </resources>

@@ -9,15 +9,16 @@ import android.widget.LinearLayout;
 import com.example.ishoopingcaffe.R;
 import com.example.listener.OnEventControlListener;
 
-public class ViewProfileManagerment extends LinearLayout {
+public class ViewProfileMyOrdersDetails extends LinearLayout {
 	Context mContext;
 	LinearLayout layoutContain;
-
-	public ViewProfileManagerment(Context context) {
+	OnEventControlListener mListener;
+	public ViewProfileMyOrdersDetails(Context context, OnEventControlListener listenner) {
 		super(context);
 		mContext = context;
 		LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		inflater.inflate(R.layout.view_profile_managerment, this,true);
+		inflater.inflate(R.layout.view_profile_my_order, this,true);
+		mListener = listenner;
 		
 	}
 	public void destroy()
