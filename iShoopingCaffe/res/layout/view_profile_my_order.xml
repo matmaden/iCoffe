@@ -2,23 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp" >
-
-
-    <EditText
-        android:id="@+id/edtCurrentPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    android:orientation="vertical" >
+	<include 
+	    layout="@layout/header_textcenter_back_option"
+	    />
+    <ListView
+        android:id="@+id/listview_Orders"
+        style="@style/ListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipChildren="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/border_line"
-        android:hint="@string/currentPassword"
-        android:imeOptions="actionNext"
-        android:inputType="textPassword" />
-
+        android:textFilterEnabled="true" />
 
 </LinearLayout>

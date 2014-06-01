@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_line"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp" >
+
+
+        <TextView
+            android:id="@+id/txtIdStatusOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="#167-Thất bại"
+            android:textColor="@color/text_normal"
+            android:drawableRight="@drawable/next1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+             />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/borderimage" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:id="@+id/txtDatetimeOrders"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="20/05/2014"
+            android:textColor="@color/text_normal" />
+
+        <TextView
+            android:id="@+id/txtPriceOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:text="đ 700.000"
+            android:textColor="@color/text_normal" />
+    </LinearLayout>
+
+</LinearLayout>

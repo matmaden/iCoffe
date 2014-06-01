@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dto.Comment;
+import com.example.dto.Orders;
 import com.example.ishoopingcaffe.R;
 
 /**
@@ -24,11 +24,11 @@ import com.example.ishoopingcaffe.R;
  * @since: Feb 28, 2014
  */
 
-public class CommentAdapter extends ArrayAdapter<Comment> {
+public class OrdersAdapter extends ArrayAdapter<Orders> {
 
 	public Context context;
 	public int resourceId;
-	public ArrayList<Comment> arrComment = null;
+	public ArrayList<Orders> arrOrders = null;
 
 	/**
 	 * 
@@ -38,12 +38,12 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 	 * @Since: Feb 28, 2014
 	 * @throws:
 	 */
-	public CommentAdapter(Context context, int resource,
-			ArrayList<Comment> objects) {
+	public OrdersAdapter(Context context, int resource,
+			ArrayList<Orders> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.resourceId = resource;
-		this.arrComment = objects;
+		this.arrOrders = objects;
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return arrComment.size();
+		return arrOrders.size();
 	}
 	
 
@@ -74,16 +74,13 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 			row = inflater.inflate(resourceId, parent, false);
 			categoryHolder = new CommentHolder();
 			
-			categoryHolder.imvUser = (ImageView) row
-					.findViewById(R.id.imv_User);
-			categoryHolder.txtUserName = (TextView) row
-					.findViewById(R.id.txtUserName);
+			
+			categoryHolder.txtIdStatusOrders = (TextView) row
+					.findViewById(R.id.txtIdStatusOrders);
 			categoryHolder.txtDateTime = (TextView) row
-					.findViewById(R.id.txtDateTime);
-			categoryHolder.txtContentComment = (TextView) row
-					.findViewById(R.id.txtContentComment);
-			categoryHolder.txtTimeComment = (TextView) row
-					.findViewById(R.id.txtTimeComment);
+					.findViewById(R.id.txtDatetimeOrders);
+			categoryHolder.txtPriceOrders = (TextView) row
+					.findViewById(R.id.txtPriceOrders);
 			
 			row.setTag(categoryHolder);
 		} else {
@@ -91,15 +88,11 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 		}
 
 		// set information for item
-		Comment comment = arrComment.get(position);
-		categoryHolder.txtUserName.setText(comment.getUserName());
-		categoryHolder.txtDateTime.setText(comment.getDatetimeComment());
-		categoryHolder.txtContentComment.setText(comment.getContenComment());
-		categoryHolder.txtTimeComment.setText("Cách đây "+comment.getTimeDuration()+" ngày. "+comment.getCountFeedback()+" phản hồi.");
+		Orders orders = arrOrders.get(position);
+		categoryHolder.txtIdStatusOrders.setText(orders.getId()+"-"+orders.getStatus());
+		categoryHolder.txtDateTime.setText(orders.getDateTime());
+		categoryHolder.txtPriceOrders.setText(orders.getCurrency()+" "+orders.getPrice());
 		
-//		categoryHolder.imv_category.setImageResource(context
-//				.getResources().getIdentifier(category.getIconName(),
-//						"drawable", context.getPackageName()));
 		
 		return row;
 	}
@@ -111,9 +104,8 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 	 *  @since: Mar 14, 2014
 	 */
 	private class CommentHolder {
-		ImageView imvUser;
-		TextView txtUserName;
+		TextView txtIdStatusOrders;
 		TextView txtDateTime;
-		TextView txtContentComment,txtTimeComment;
+		TextView txtPriceOrders;
 	}
 }

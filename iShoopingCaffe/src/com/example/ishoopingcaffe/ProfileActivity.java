@@ -12,12 +12,14 @@ import com.example.listener.ActionEventConstantProfile;
 import com.example.listener.OnEventControlListener;
 import com.example.views.profile.ViewLoginRegister;
 import com.example.views.profile.ViewProfileMainManagerment;
+import com.example.views.profile.ViewProfileMyOrders;
 
 public class ProfileActivity extends BaseActivity implements OnEventControlListener {
 	LinearLayout mainContainerProfile;
 	Animation animation;
 	ViewLoginRegister viewLoginRegister;
 	ViewProfileMainManagerment viewProfileManager;
+	ViewProfileMyOrders viewProfileMyOrders;
 	Context mContext;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,16 @@ public class ProfileActivity extends BaseActivity implements OnEventControlListe
 			animation = AnimationUtils.loadAnimation(mContext, R.anim.rail_from_right_to_left);
 			viewLoginRegister.startAnimation(animation);
 			mainContainerProfile.addView(viewLoginRegister);
+			break;
+		}
+		case ActionEventConstantProfile.ACTION_CHANGE_VIEW_ORDER_PPRODUCT:
+		{
+			mainContainerProfile.removeAllViews();
+			viewProfileMyOrders = new ViewProfileMyOrders(mContext, this);
+			viewProfileMyOrders.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			animation = AnimationUtils.loadAnimation(mContext, R.anim.rail_from_right_to_left);
+			viewProfileMyOrders.startAnimation(animation);
+			mainContainerProfile.addView(viewProfileMyOrders);
 			break;
 		}
 		default:
