@@ -15,7 +15,7 @@ public class ActionEventConstantProfile {
 	public static final int ACTION_CHANGE_VIEW_LOGOUT = 3;
 	public static final int ACTION_CHANGE_VIEW_ORDER_PPRODUCT = 4;
 	public static final int ACTION_CHANGE_VIEW_ORDER_PPRODUCT_DETAILS = 5;
-	public static final int ACTION_CHANGE_VIEW_DETAILS_ADD_SHOPPING_CART = 6;
+	public static final int ACTION_CHANGE_VIEW_ORDER_PPRODUCT_DETAILS_NOTES = 6;
 //	public static final int ACTION_DOWN_LOAD = 6;
 //	public static final int ACTION_CANCEL_DOWNLOAD = 7;
 //	public static final int ACTION_LATER_DOWNLOAD = 8;

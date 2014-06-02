@@ -13,7 +13,7 @@
         android:background="@color/main_color"
         android:gravity="center_vertical" >
 
-       <Button
+        <Button
             android:id="@+id/shoppingCartEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,25 +29,21 @@
             android:gravity="center"
             android:text="@string/summary"
             android:textColor="@color/white"
-            android:textStyle="bold" 
             android:textSize="18sp"
-            />
+            android:textStyle="bold" />
 
-        
-         <Button
+        <Button
             android:id="@+id/shoppingCartCheckOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
             android:background="@android:color/transparent"
             android:text="@string/order"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="17sp"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-             />
-        
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <!-- Content -->
@@ -103,11 +99,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                     >
+                    android:paddingTop="7dp" >
 
                     <TextView
                         android:id="@+id/shoppingCartTextTotalPrice"
@@ -144,11 +139,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                     >
+                    android:paddingTop="7dp" >
 
                     <TextView
                         android:id="@+id/shoppingCartTextTransport"
@@ -219,10 +213,10 @@
                 android:background="@drawable/border_line"
                 android:drawableRight="@drawable/next"
                 android:gravity="left|center_vertical"
+                android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="7dp"
-                android:paddingBottom="7dp"
                 android:text="@string/choose_payment_getway"
                 android:textColor="@color/text_normal"
                 android:textSize="15sp" />
@@ -231,11 +225,10 @@
                 android:id="@+id/textDescriptionPaymentGetway"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_gray"
                 android:layout_marginTop="5dp"
                 android:text="@string/payment_when_receive_product"
-                android:visibility="gone"
-                />
+                android:textColor="@color/text_gray"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 

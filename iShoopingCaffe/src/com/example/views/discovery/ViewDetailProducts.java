@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -24,6 +22,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adapter.ListSimpleArrayAdapter;
 import com.example.ishoopingcaffe.R;
 import com.example.listener.ActionEventConstantDiscovery;
 import com.example.listener.OnEventControlListener;
@@ -90,32 +89,20 @@ public class ViewDetailProducts extends LinearLayout implements OnClickListener{
         // convert to simple array
         popUpContents = new String[dogsList.size()];
         dogsList.toArray(popUpContents);
- 
-        ViewTreeObserver vto = btnAddCart.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-
-              int widthbtn = btnAddCart.getWidth();
-              int height = btnAddCart.getHeight(); 
-
-              System.out.println("ket qua:"+widthbtn +"/" +height);
-            }
-        });
-     // initialize pop up window
-        popupWindowDogs = popupWindowDogs();
+        
+        popupWindowDogs = popupWindowDogs(popUpContents);
 		
 	}
-	public PopupWindow popupWindowDogs() {
+	public PopupWindow popupWindowDogs(String[] arrrContent) {
 		 
         // initialize a pop up window type
         PopupWindow popupWindow = new PopupWindow(mContext);
  
         // the drop down list is a list view
         ListView listViewDogs = new ListView(mContext);
-         
+        ListSimpleArrayAdapter adpter = new ListSimpleArrayAdapter(mContext, android.R.layout.simple_list_item_1, arrrContent);
         // set our adapter and pass our pop up window contents
-        listViewDogs.setAdapter(dogsAdapter(popUpContents));
+        listViewDogs.setAdapter(adpter);
          
         // set the item click listener
         listViewDogs.setOnItemClickListener(new OnItemClickListener() {
@@ -137,7 +124,7 @@ public class ViewDetailProducts extends LinearLayout implements OnClickListener{
 		        String selectedItemTag = ((TextView) view).getTag().toString();
 		        Toast.makeText(mContext, "ID is: " + selectedItemTag, Toast.LENGTH_SHORT).show();
 		        
-		        ShoppingCartItem item = new ShoppingCartItem(randomString(),"Caffe Càfuchno", "20000.0","đ",1);
+		        ShoppingCartItem item = new ShoppingCartItem(randomString(),"Caffe Cafuchino", "20000.0","đ",1);
 		        mListener.onEvent(ActionEventConstantDiscovery.ACTION_CHANGE_VIEW_DETAILS_ADD_SHOPPING_CART, null, item);
 			}
 		});
@@ -171,9 +158,6 @@ public class ViewDetailProducts extends LinearLayout implements OnClickListener{
  
                 // setting the ID and text for every items in the list
                 String item = getItem(position);
-//                String[] itemArr = item.split("::");
-//                String text = itemArr[0];
-//                String id = itemArr[1];
  
                 // visual settings for the list item
                 TextView listItem = new TextView(mContext);
